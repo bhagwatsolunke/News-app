@@ -2,7 +2,7 @@ import React from 'react'
 
 const Newsitem =(props)=> {
 
-
+ 
  
     let { title, description, imageUrl, newsUrl, author, date , source} = props;
     return (
@@ -18,7 +18,7 @@ const Newsitem =(props)=> {
           <span className="position-absolute top-0  translate-middle badge rounded-pill bg-danger"> {source} </span> 
           </div>
           
-          <img src={!imageUrl ? "https://images.moneycontrol.com/static-mcnews/2022/08/Wipro1-770x433.png" : imageUrl} className="card-img-top" alt="..." />
+          <img src={!imageUrl ? "https://images.moneycontrol.com/static-mcnews/2022/08/Wipro1-770x433.png" : imageUrl} className="card-img-top" alt="..."  />
           <div className="card-body">
             <h5 className="card-title">{title}</h5>
             <p className="card-text">{description}</p>
