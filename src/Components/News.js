@@ -51,11 +51,11 @@ const News = (props) => {
       </h2>
       {loading && <Spinner />}
       <InfiniteScroll
-        dataLength={articles.length}
-        next={fetchMoreData}
-        hasMore={articles.length < totalResults}
-        loader={<Spinner />}
-      >
+  dataLength={articles.length}
+  next={fetchMoreData}
+  hasMore={totalResults > 0 && articles.length < totalResults}
+  loader={<Spinner />}
+>
         <div className="container">
           <div className="row">
             {articles.map((element) => {
