@@ -55,7 +55,13 @@ const News = (props) => {
   next={fetchMoreData}
   hasMore={totalResults > 0 && articles.length < totalResults}
   loader={<Spinner />}
+  endMessage={
+    articles.length > 0 && articles.length === totalResults ? (
+      <p style={{ textAlign: 'center' }}>No more articles to load.</p>
+    ) : null
+  }
 >
+
         <div className="container">
           <div className="row">
             {articles.map((element) => {
